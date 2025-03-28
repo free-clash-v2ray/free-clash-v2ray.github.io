@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://free-clash-v2ray.github.io/news/article-83419.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>深入解析 Clash 授权：原理、模式及使用方法详解</title>
+        <meta name="description" content="📌 引言：为何要关注 Clash 授权？
+在当今的网络环境下，越来越多的用户希望自由、安全、高效地访问互联网，而 Clash 作为一款强大的代理工具，能够帮助用户绕过网络限制、优化网络速度并保护隐私安" />
+        <link rel="icon" href="/assets/website/img/v2raynodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash V2ray节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://free-clash-v2ray.github.io/news/article-83419.htm" />
+    <meta property="og:site_name" content="Free Clash V2ray节点订阅官网" />
+    <meta property="og:title" content="深入解析 Clash 授权：原理、模式及使用方法详解" />
+    <meta property="og:image" content="https://free-clash-v2ray.github.io/uploads/20240603/3f1ee3d6e1513902c2d94888c3ce29be.webp" />
+        <meta property="og:release_date" content="2025-03-28T09:56:19" />
+    <meta property="og:updated_time" content="2025-03-28T09:56:19" />
+        <meta property="og:description" content="📌 引言：为何要关注 Clash 授权？
+在当今的网络环境下，越来越多的用户希望自由、安全、高效地访问互联网，而 Clash 作为一款强大的代理工具，能够帮助用户绕过网络限制、优化网络速度并保护隐私安" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深入解析 Clash 授权：原理、模式及使用方法详解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2raynodes/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVCE9MTSXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BVCE9MTSXG');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">
+                        <span>Free Clash V2ray</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>深入解析 Clash 授权：原理、模式及使用方法详解</h1>
+                </div>
+                <div>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                
+<h2 data-start="36" data-end="66" class=""><strong data-start="39" data-end="64">📌 引言：为何要关注 Clash 授权？</strong></h2>
+<p data-start="68" data-end="198" class="">在当今的网络环境下，越来越多的用户希望自由、安全、高效地访问互联网，而 <strong data-start="104" data-end="113">Clash</strong> 作为一款强大的代理工具，能够帮助用户绕过网络限制、优化网络速度并保护隐私安全。然而，在使用 Clash 之前，我们需要了解一个关键概念——<strong data-start="183" data-end="195">Clash 授权</strong>。</p>
+<p data-start="200" data-end="315" class="">Clash 授权不仅涉及如何正确获取和配置使用权限，还关系到代理的稳定性、合规性及安全性。<strong data-start="245" data-end="274">如何申请授权？如何配置授权？有哪些不同的授权模式？</strong> 本文将带您深入探讨 Clash 授权的各个方面，帮助您更高效地使用这款工具。</p>
+<hr data-start="317" data-end="320" class="" style="">
+<h2 data-start="322" data-end="347" class=""><strong data-start="325" data-end="345">📌 什么是 Clash 授权？</strong></h2>
+<h3 data-start="349" data-end="373" class=""><strong data-start="353" data-end="371">🔹 Clash 授权的定义</strong></h3>
+<p data-start="375" data-end="447" class="">Clash 授权（Clash License）指的是 <strong data-start="402" data-end="428">用户获得合法使用 Clash 代理功能的权利</strong>。这可能涉及不同的使用场景，例如：</p>
+<p data-start="449" data-end="544" class="">✅ 个人用户在手机、电脑上使用 Clash 进行科学上网<br data-start="477" data-end="480">
+✅ 组织或企业内部部署 Clash 代理，实现团队网络加速<br data-start="509" data-end="512">
+✅ 代理服务商基于 Clash 技术提供 VPN 或加速服务</p>
+<p data-start="546" data-end="609" class="">通常，Clash 本身是一个 <strong data-start="561" data-end="569">开源软件</strong>，但具体的代理节点（服务器）需要获得<strong data-start="587" data-end="593">授权</strong>才能使用。授权方式可能包括：</p>
+<p data-start="611" data-end="716" class="">🔹 <strong data-start="614" data-end="622">订阅模式</strong>（用户通过购买或申请获取配置链接）<br data-start="639" data-end="642">
+🔹 <strong data-start="645" data-end="654">授权码模式</strong>（某些商家提供特定的授权码进行激活）<br data-start="672" data-end="675">
+🔹 <strong data-start="678" data-end="686">自建模式</strong>（高级用户可自行搭建 Clash 服务器，无需外部授权）</p>
+<hr data-start="718" data-end="721" class="" style="">
+<h2 data-start="723" data-end="747" class=""><strong data-start="726" data-end="745">📌 Clash 授权模式详解</strong></h2>
+<p data-start="749" data-end="789" class="">Clash 授权方式主要可以分为以下几种模式，每种模式适用于不同的需求场景。</p>
+<h3 data-start="791" data-end="811" class=""><strong data-start="795" data-end="809">1️⃣ 个人用户授权</strong></h3>
+<p data-start="812" data-end="926" class="">✅ <strong data-start="814" data-end="822">适用场景</strong>：适用于个人使用 Clash 进行代理上网，用户通常通过 <strong data-start="851" data-end="860">代理提供商</strong> 购买订阅服务。<br data-start="868" data-end="871">
+✅ <strong data-start="873" data-end="881">获取方式</strong>：用户在代理商官网购买订阅，获得 Clash 配置链接（通常是 YAML 文件格式）。</p>
+<p data-start="928" data-end="942" class="">🔹 <strong data-start="931" data-end="939">授权步骤</strong>：</p>
+<ol data-start="943" data-end="1064">
+<li data-start="943" data-end="972" class="" style="">
+<p data-start="946" data-end="972" class="">购买 Clash 订阅（通常为月付/年付服务）。</p>
+</li>
+<li data-start="973" data-end="1033" class="" style="">
+<p data-start="976" data-end="1033" class="">获取订阅链接（一般是 URL 格式，例如 <code data-start="997" data-end="1029">https://example.com/clash.yaml</code>）。</p>
+</li>
+<li data-start="1034" data-end="1064" class="" style="">
+<p data-start="1037" data-end="1064" class="">在 Clash 软件中导入订阅，即可使用代理功能。</p>
+</li>
+</ol>
+<p data-start="1066" data-end="1145" class="">🚀 <strong data-start="1069" data-end="1075">优势</strong>：简单易用，适合新手用户，代理商通常会提供稳定的服务器。<br data-start="1103" data-end="1106">
+⚠ <strong data-start="1108" data-end="1116">注意事项</strong>：选择信誉良好的代理服务商，避免数据泄露或服务不稳定。</p>
+<hr data-start="1147" data-end="1150" class="" style="">
+<h3 data-start="1152" data-end="1173" class=""><strong data-start="1156" data-end="1171">2️⃣ 组织/团队授权</strong></h3>
+<p data-start="1174" data-end="1282" class="">✅ <strong data-start="1176" data-end="1184">适用场景</strong>：适用于企业、组织、教育机构，内部员工通过 Clash 代理访问特定资源或优化网络。<br data-start="1226" data-end="1229">
+✅ <strong data-start="1231" data-end="1239">获取方式</strong>：企业可以与代理服务商签订协议，获取多个授权账户，或自行部署 Clash 服务器。</p>
+<p data-start="1284" data-end="1298" class="">🔹 <strong data-start="1287" data-end="1295">授权步骤</strong>：</p>
+<ol data-start="1299" data-end="1417">
+<li data-start="1299" data-end="1346" class="" style="">
+<p data-start="1302" data-end="1346" class="">申请企业级授权，通常以 <strong data-start="1314" data-end="1323">多用户订阅</strong> 或 <strong data-start="1326" data-end="1338">固定 IP 代理</strong> 形式提供。</p>
+</li>
+<li data-start="1347" data-end="1380" class="" style="">
+<p data-start="1350" data-end="1380" class="">统一配置 Clash 服务器，并分发配置文件给团队成员。</p>
+</li>
+<li data-start="1381" data-end="1417" class="" style="">
+<p data-start="1384" data-end="1417" class="">使用策略模式，设置访问规则（如限制特定网站或应用的访问权限）。</p>
+</li>
+</ol>
+<p data-start="1419" data-end="1492" class="">🚀 <strong data-start="1422" data-end="1428">优势</strong>：可控性强，可定制化网络规则，适合大规模使用。<br data-start="1451" data-end="1454">
+⚠ <strong data-start="1456" data-end="1464">注意事项</strong>：需要专业人员维护服务器，并确保公司员工的网络安全。</p>
+<hr data-start="1494" data-end="1497" class="" style="">
+<h3 data-start="1499" data-end="1526" class=""><strong data-start="1503" data-end="1524">3️⃣ 自建服务器授权（高级用户）</strong></h3>
+<p data-start="1527" data-end="1641" class="">✅ <strong data-start="1529" data-end="1537">适用场景</strong>：适用于具备技术能力的用户，自己搭建 Clash 服务器，不依赖外部代理服务商。<br data-start="1577" data-end="1580">
+✅ <strong data-start="1582" data-end="1590">获取方式</strong>：用户自行购买云服务器（如 AWS、Vultr、Linode），部署 Clash 并生成配置文件。</p>
+<p data-start="1643" data-end="1657" class="">🔹 <strong data-start="1646" data-end="1654">授权步骤</strong>：</p>
+<ol data-start="1658" data-end="1774">
+<li data-start="1658" data-end="1695" class="" style="">
+<p data-start="1661" data-end="1695" class="">购买 VPS（如 AWS、Google Cloud、阿里云等）。</p>
+</li>
+<li data-start="1696" data-end="1738" class="" style="">
+<p data-start="1699" data-end="1738" class="">在 VPS 上安装 Clash 服务端（如 Clash Premium）。</p>
+</li>
+<li data-start="1739" data-end="1774" class="" style="">
+<p data-start="1742" data-end="1774" class="">生成自己的代理配置文件，并在本地 Clash 客户端中导入。</p>
+</li>
+</ol>
+<p data-start="1776" data-end="1849" class="">🚀 <strong data-start="1779" data-end="1785">优势</strong>：完全自主，无需依赖第三方，安全性高。<br data-start="1804" data-end="1807">
+⚠ <strong data-start="1809" data-end="1817">注意事项</strong>：需要一定的运维能力，服务器成本较高，可能需要应对封锁问题。</p>
+<hr data-start="1851" data-end="1854" class="" style="">
+<h2 data-start="1856" data-end="1882" class=""><strong data-start="1859" data-end="1880">📌 如何配置 Clash 授权？</strong></h2>
+<p data-start="1884" data-end="1930" class="">无论是哪种授权模式，用户都需要正确配置 Clash 才能正常使用。以下是详细的配置步骤。</p>
+<h3 data-start="1932" data-end="1963" class=""><strong data-start="1936" data-end="1961">🔹 1. 下载并安装 Clash 客户端</strong></h3>
+<p data-start="1964" data-end="1988" class="">Clash 有多个版本，推荐使用以下客户端：</p>
+<p data-start="1990" data-end="2220" class="">✅ <strong data-start="1992" data-end="2005">Windows 版</strong>：<a data-start="2006" data-end="2061" rel="noopener" target="_new" href="https://github.com/ClashVerge/ClashVerge">Clash Verge</a><br data-start="2061" data-end="2064">
+✅ <strong data-start="2066" data-end="2079">Android 版</strong>：<a data-start="2080" data-end="2150" rel="noopener" target="_new" href="https://github.com/Kr328/ClashForAndroid">Clash for Android (ClashA)</a><br data-start="2150" data-end="2153">
+✅ <strong data-start="2155" data-end="2170">Mac/Linux 版</strong>：<a data-start="2171" data-end="2218" rel="noopener" target="_new" href="https://github.com/yichengchen/clashX">ClashX</a></p>
+<p data-start="2222" data-end="2244" class="">下载后，按提示安装 Clash 客户端。</p>
+<hr data-start="2246" data-end="2249" class="" style="">
+<h3 data-start="2251" data-end="2276" class=""><strong data-start="2255" data-end="2274">🔹 2. 获取并导入授权配置</strong></h3>
+<p data-start="2277" data-end="2327" class="">Clash 代理的授权通常以 <strong data-start="2292" data-end="2308">YAML 格式的配置文件</strong> 提供，用户可以通过以下方法导入：</p>
+<p data-start="2329" data-end="2347" class="">1️⃣ <strong data-start="2333" data-end="2345">通过订阅链接导入</strong></p>
+<ul data-start="2348" data-end="2422">
+<li data-start="2348" data-end="2384" class="" style="">
+<p data-start="2350" data-end="2384" class="">进入 Clash 客户端 → <strong data-start="2365" data-end="2371">配置</strong> → <strong data-start="2374" data-end="2382">导入配置</strong></p>
+</li>
+<li data-start="2385" data-end="2422" class="" style="">
+<p data-start="2387" data-end="2422" class="">选择 <strong data-start="2390" data-end="2404">“从 URL 导入”</strong>，粘贴 Clash 授权订阅链接</p>
+</li>
+</ul>
+<p data-start="2424" data-end="2442" class="">2️⃣ <strong data-start="2428" data-end="2440">手动导入配置文件</strong></p>
+<ul data-start="2443" data-end="2495">
+<li data-start="2443" data-end="2462" class="" style="">
+<p data-start="2445" data-end="2462" class="">下载 <code data-start="2448" data-end="2455">.yaml</code> 配置文件</p>
+</li>
+<li data-start="2463" data-end="2495" class="" style="">
+<p data-start="2465" data-end="2495" class="">在 Clash 客户端中，选择 <strong data-start="2481" data-end="2493">“导入本地文件”</strong></p>
+</li>
+</ul>
+<p data-start="2497" data-end="2549" class="">⚠ <strong data-start="2499" data-end="2505">注意</strong>：不同的 Clash 版本可能有不同的导入方式，建议参考官方文档或代理服务商的教程。</p>
+<hr data-start="2551" data-end="2554" class="" style="">
+<h3 data-start="2556" data-end="2588" class=""><strong data-start="2560" data-end="2586">🔹 3. 启用 Clash 并选择代理模式</strong></h3>
+<ol data-start="2589" data-end="2742">
+<li data-start="2589" data-end="2619" class="" style="">
+<p data-start="2592" data-end="2619" class="">在 Clash 客户端主界面，<strong data-start="2607" data-end="2617">开启代理服务</strong></p>
+</li>
+<li data-start="2620" data-end="2742" class="" style="">
+<p data-start="2623" data-end="2640" class="">选择适合的 <strong data-start="2629" data-end="2637">代理模式</strong>：</p>
+<ul data-start="2644" data-end="2742">
+<li data-start="2644" data-end="2678" class="" style="">
+<p data-start="2646" data-end="2678" class=""><strong data-start="2646" data-end="2654">全局模式</strong>：所有流量都走代理（适用于封锁较严重的地区）</p>
+</li>
+<li data-start="2682" data-end="2714" class="" style="">
+<p data-start="2684" data-end="2714" class=""><strong data-start="2684" data-end="2696">规则模式（推荐）</strong>：智能分流，国内直连，国外走代理</p>
+</li>
+<li data-start="2718" data-end="2742" class="" style="">
+<p data-start="2720" data-end="2742" class=""><strong data-start="2720" data-end="2728">直连模式</strong>：关闭代理，直接访问网络</p>
+</li>
+</ul>
+</li>
+</ol>
+<p data-start="2744" data-end="2787" class="">🚀 <strong data-start="2747" data-end="2755">推荐使用</strong>：“规则模式”，可避免本地应用（如银行 App）被代理影响。</p>
+<hr data-start="2789" data-end="2792" class="">
+<h2 data-start="2794" data-end="2824" class=""><strong data-start="2797" data-end="2822">📌 Clash 授权的常见问题及解决方案</strong></h2>
+<h3 data-start="2826" data-end="2854" class=""><strong data-start="2830" data-end="2852">❓ Q1：Clash 无法连接代理？</strong></h3>
+<p data-start="2855" data-end="2868" class="">✅ <strong data-start="2857" data-end="2865">解决方案</strong>：</p>
+<ol data-start="2869" data-end="2974">
+<li data-start="2869" data-end="2908" class="">
+<p data-start="2872" data-end="2908" class="">确保 <strong data-start="2875" data-end="2886">授权订阅未过期</strong>，可在浏览器中打开订阅链接测试是否可用。</p>
+</li>
+<li data-start="2909" data-end="2947" class="">
+<p data-start="2912" data-end="2947" class=""><strong data-start="2912" data-end="2920">检查网络</strong>，确保 VPN 或其他防火墙不会干扰 Clash。</p>
+</li>
+<li data-start="2948" data-end="2974" class="">
+<p data-start="2951" data-end="2974" class=""><strong data-start="2951" data-end="2961">尝试切换节点</strong>，选择更稳定的服务器。</p>
+</li>
+</ol>
+<hr data-start="2976" data-end="2979" class="">
+<h3 data-start="2981" data-end="3012" class=""><strong data-start="2985" data-end="3010">❓ Q2：如何优化 Clash 代理速度？</strong></h3>
+<p data-start="3013" data-end="3026" class="">✅ <strong data-start="3015" data-end="3023">优化方案</strong>：</p>
+<ol data-start="3027" data-end="3138">
+<li data-start="3027" data-end="3063" class="">
+<p data-start="3030" data-end="3063" class="">选择 <strong data-start="3033" data-end="3044">速度最快的节点</strong>（可在 Clash 中测试延迟）。</p>
+</li>
+<li data-start="3064" data-end="3107" class="">
+<p data-start="3067" data-end="3107" class=""><strong data-start="3067" data-end="3080">修改 DNS 设置</strong>（推荐使用 1.1.1.1 或 8.8.8.8）。</p>
+</li>
+<li data-start="3108" data-end="3138" class="">
+<p data-start="3111" data-end="3138" class="">定期 <strong data-start="3114" data-end="3124">更新订阅配置</strong>，避免使用已失效的节点。</p>
+</li>
+</ol>
+<hr data-start="3140" data-end="3143" class="">
+<h2 data-start="3145" data-end="3179" class=""><strong data-start="3148" data-end="3177">📌 结论：正确授权，畅享 Clash 代理体验！</strong></h2>
+<p data-start="3181" data-end="3298" class="">通过本文的详细解析，相信大家已经对 <strong data-start="3199" data-end="3223">Clash 授权的概念、模式、配置及优化</strong> 有了更深入的了解。无论是个人用户、团队授权还是自建服务器，只要正确获取授权并配置 Clash，便可享受 <strong data-start="3276" data-end="3293">更自由、更安全的网络体验！</strong> 🚀</p>
+<p data-start="3300" data-end="3335" class="">希望本文能帮助您顺利使用 Clash，如有更多问题，欢迎讨论交流！🎉</p>                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-82863.htm">详细指南：如何在美区下载并高效使用 Shadowrocket</a></p>
+                                        <p>下一个：<a href="/news/article-83420.htm">Clash安卓应用添加节点全攻略：轻松实现高效科学上网</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-83420.htm" title="Clash安卓应用添加节点全攻略：轻松实现高效科学上网">Clash安卓应用添加节点全攻略：轻松实现高效科学上网</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-free-v2ray.htm" title="Free Clash V2ray | 3月27日18.5M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点">Free Clash V2ray | 3月27日18.5M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-82862.htm" title="科学上网指南：如何选择合适的浏览器与下载工具">科学上网指南：如何选择合适的浏览器与下载工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-node-subscribe.htm" title="Free Clash V2ray | 3月28日19.8M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点">Free Clash V2ray | 3月28日19.8M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-82863.htm" title="详细指南：如何在美区下载并高效使用 Shadowrocket">详细指南：如何在美区下载并高效使用 Shadowrocket</a></li>
+                        <li class="py-2"><a href="/news/article-83419.htm" title="深入解析 Clash 授权：原理、模式及使用方法详解">深入解析 Clash 授权：原理、模式及使用方法详解</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container py-4">
+            <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <a href="/">Free Clash V2ray节点订阅官网</a> 版权所有 Powered by WordPress
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2raynodes/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2raynodes/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
