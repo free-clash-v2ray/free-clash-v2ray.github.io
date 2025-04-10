@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://free-clash-v2ray.github.io/news/article-92167.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案</title>
+        <meta name="description" content="前言
+在当今互联网环境下，网络审查和隐私问题日益突出，越来越多的用户选择使用 V2Ray 来保护自己的网络安全，并突破网络限制。而 OpenWRT 作为一款功能强大的路由器固件，支持多种插件扩展，使得" />
+        <link rel="icon" href="/assets/website/img/v2raynodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash V2ray节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://free-clash-v2ray.github.io/news/article-92167.htm" />
+    <meta property="og:site_name" content="Free Clash V2ray节点订阅官网" />
+    <meta property="og:title" content="OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案" />
+    <meta property="og:image" content="https://free-clash-v2ray.github.io/uploads/20240603/c48bbe9046c4509c8158f3d1adb3cb8e.webp" />
+        <meta property="og:release_date" content="2025-04-09T09:18:01" />
+    <meta property="og:updated_time" content="2025-04-09T09:18:01" />
+        <meta property="og:description" content="前言
+在当今互联网环境下，网络审查和隐私问题日益突出，越来越多的用户选择使用 V2Ray 来保护自己的网络安全，并突破网络限制。而 OpenWRT 作为一款功能强大的路由器固件，支持多种插件扩展，使得" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2raynodes/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVCE9MTSXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BVCE9MTSXG');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">
+                        <span>Free Clash V2ray</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案</h1>
+                </div>
+                <div>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                
+<h2 data-start="40" data-end="51" class=""><strong data-start="43" data-end="49">前言</strong></h2>
+<p data-start="53" data-end="236" class="">在当今互联网环境下，网络审查和隐私问题日益突出，越来越多的用户选择使用 V2Ray 来保护自己的网络安全，并突破网络限制。而 OpenWRT 作为一款功能强大的路由器固件，支持多种插件扩展，使得在路由器上安装 V2Ray 成为可能。通过 OpenWRT 运行 V2Ray，用户可以实现全局代理，使家中所有设备都能无缝访问自由的互联网，而无需逐个设备配置代理软件。</p>
+<p data-start="238" data-end="349" class="">本教程将为你提供一份详尽的 OpenWRT 安装 V2Ray 插件的指南，从前期准备到最终测试，涵盖每一个关键步骤。同时，我们还会解析常见问题，帮助你排除故障，确保你的 OpenWRT 路由器能够稳定运行 V2Ray。</p>
+<hr data-start="351" data-end="354" class="" style="">
+<h2 data-start="356" data-end="375" class=""><strong data-start="359" data-end="373">一、安装前的准备工作</strong></h2>
+<p data-start="377" data-end="419" class="">在正式安装 V2Ray 插件之前，需要做好以下准备工作，以确保安装过程顺利进行。</p>
+<h3 data-start="421" data-end="442" class=""><strong data-start="425" data-end="440">1.1 确认设备兼容性</strong></h3>
+<p data-start="444" data-end="607" class="">不是所有路由器都支持 OpenWRT，因此，首先需要检查你的路由器型号是否兼容。你可以访问 OpenWRT 官方网站（<a data-start="503" data-end="543" rel="noopener" target="_new" class="cursor-pointer">https://openwrt.org/toh/start）查询你的设备是否支持</a> OpenWRT。如果你的路由器不兼容，你可能需要更换支持 OpenWRT 的设备，或者使用旁路由的方式来运行 V2Ray。</p>
+<h3 data-start="609" data-end="632" class=""><strong data-start="613" data-end="630">1.2 备份当前路由器设置</strong></h3>
+<p data-start="634" data-end="753" class="">在对 OpenWRT 进行修改之前，建议先备份当前的设置，以防止意外错误导致网络无法使用。你可以通过 Web 管理界面（<a data-start="694" data-end="715" rel="noopener" target="_new" class="cursor-pointer">http://192.168.1.1）进入</a> <strong data-start="716" data-end="730">系统 → 备份/恢复</strong>，点击 <strong data-start="734" data-end="742">生成备份</strong> 来保存当前配置。</p>
+<h3 data-start="755" data-end="784" class=""><strong data-start="759" data-end="782">1.3 确保 OpenWRT 版本最新</strong></h3>
+<p data-start="786" data-end="884" class="">建议更新 OpenWRT 到最新版本，以提高系统的稳定性和兼容性。如果你的 OpenWRT 版本较旧，可以前往 OpenWRT 官网下载最新固件，并通过 <strong data-start="863" data-end="876">系统 → 固件升级</strong> 进行更新。</p>
+<hr data-start="886" data-end="889" class="" style="">
+<h2 data-start="891" data-end="916" class=""><strong data-start="894" data-end="914">二、安装 V2Ray 插件的方法</strong></h2>
+<h3 data-start="918" data-end="938" class=""><strong data-start="922" data-end="936">2.1 连接到路由器</strong></h3>
+<p data-start="940" data-end="978" class="">安装 V2Ray 需要使用 SSH 连接到你的 OpenWRT 路由器。</p>
+<ol data-start="980" data-end="1178">
+<li data-start="980" data-end="1068" class="" style="">
+<p data-start="983" data-end="1068" class="">在 Windows 上，可以使用 <strong data-start="1000" data-end="1009">PuTTY</strong> 连接到路由器，输入路由器的 IP 地址（默认是 192.168.1.1），端口 22，点击 "Open" 连接。</p>
+</li>
+<li data-start="1069" data-end="1178" class="" style="">
+<p data-start="1072" data-end="1100" class="">在 macOS/Linux 上，可以打开终端并输入：</p>
+<pre class="overflow-visible!" data-start="1105" data-end="1145"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>ssh root@192.168.1.1
+</span></span></code></div></div></pre>
+<p data-start="1150" data-end="1178" class="">输入密码后，即可进入 OpenWRT 的命令行界面。</p>
+</li>
+</ol>
+<hr data-start="1180" data-end="1183" class="" style="">
+<h3 data-start="1185" data-end="1206" class=""><strong data-start="1189" data-end="1204">2.2 更新软件包列表</strong></h3>
+<p data-start="1208" data-end="1253" class="">为了确保可以安装最新的软件包，需要先更新 OpenWRT 的软件包列表。输入以下命令：</p>
+<pre class="overflow-visible!" data-start="1255" data-end="1280"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>opkg update
+</span></span></code></div></div></pre>
+<p data-start="1282" data-end="1391" class="">如果你的网络不稳定，可能会遇到更新失败的情况，此时可以尝试更换 OpenWRT 软件源。例如，在 <code data-start="1331" data-end="1357">/etc/opkg/distfeeds.conf</code> 文件中修改镜像地址，然后重新运行 <code data-start="1375" data-end="1388">opkg update</code>。</p>
+<hr data-start="1393" data-end="1396" class="" style="">
+<h3 data-start="1398" data-end="1423" class=""><strong data-start="1402" data-end="1421">2.3 安装 V2Ray 插件</strong></h3>
+<p data-start="1425" data-end="1442" class="">使用以下命令安装 V2Ray：</p>
+<pre class="overflow-visible!" data-start="1444" data-end="1476"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>opkg install v2ray
+</span></span></code></div></div></pre>
+<p data-start="1478" data-end="1550" class="">安装过程中，可能会遇到依赖库缺失的问题。如果出现类似 <code data-start="1505" data-end="1530">Unknown package ‘v2ray’</code> 的错误，可以尝试安装额外的依赖包：</p>
+<pre class="overflow-visible!" data-start="1552" data-end="1593"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>opkg install luci-app-v2ray
+</span></span></code></div></div></pre>
+<p data-start="1595" data-end="1625" class="">安装完成后，输入以下命令检查 V2Ray 是否正确安装：</p>
+<pre class="overflow-visible!" data-start="1627" data-end="1655"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>v2ray -version
+</span></span></code></div></div></pre>
+<p data-start="1657" data-end="1684" class="">如果终端返回 V2Ray 版本号，则表示安装成功。</p>
+<hr data-start="1686" data-end="1689" class="" style="">
+<h3 data-start="1691" data-end="1713" class=""><strong data-start="1695" data-end="1711">2.4 配置 V2Ray</strong></h3>
+<p data-start="1715" data-end="1757" class="">V2Ray 需要正确配置才能正常运行，主要涉及服务器信息、端口、加密方式等参数。</p>
+<h4 data-start="1759" data-end="1792" class=""><strong data-start="1764" data-end="1790">步骤 1：进入 OpenWRT Web 界面</strong></h4>
+<p data-start="1793" data-end="1841" class="">打开浏览器，访问 <a data-start="1802" data-end="1823" rel="noopener" target="_new" class="cursor-pointer">http://192.168.1.1，进入</a> OpenWRT Web 界面。</p>
+<h4 data-start="1843" data-end="1872" class=""><strong data-start="1848" data-end="1870">步骤 2：找到 V2Ray 配置界面</strong></h4>
+<p data-start="1873" data-end="1907" class="">在 "服务" 菜单中找到 V2Ray 选项，并点击进入配置界面。</p>
+<h4 data-start="1909" data-end="1939" class=""><strong data-start="1914" data-end="1937">步骤 3：输入 V2Ray 服务器信息</strong></h4>
+<ul data-start="1940" data-end="2072">
+<li data-start="1940" data-end="1961" class="" style="">
+<p data-start="1942" data-end="1961" class=""><strong data-start="1942" data-end="1951">服务器地址</strong>（IP 或域名）</p>
+</li>
+<li data-start="1962" data-end="1989" class="" style="">
+<p data-start="1964" data-end="1989" class=""><strong data-start="1964" data-end="1971">端口号</strong>（通常是 443 或 8080）</p>
+</li>
+<li data-start="1990" data-end="2027" class="" style="">
+<p data-start="1992" data-end="2027" class=""><strong data-start="1992" data-end="2000">UUID</strong>（你的 V2Ray 账号标识，必须与服务器端匹配）</p>
+</li>
+<li data-start="2028" data-end="2072" class="" style="">
+<p data-start="2030" data-end="2072" class=""><strong data-start="2030" data-end="2038">传输协议</strong>（常见的有 vmess、vless、shadowsocks 等）</p>
+</li>
+</ul>
+<p data-start="2074" data-end="2090" class="">输入完成后，保存并应用设置。</p>
+<hr data-start="2092" data-end="2095" class="" style="">
+<h3 data-start="2097" data-end="2125" class=""><strong data-start="2101" data-end="2123">2.5 启动 V2Ray 并测试连接</strong></h3>
+<p data-start="2127" data-end="2154" class="">在 SSH 终端中，使用以下命令启动 V2Ray：</p>
+<pre class="overflow-visible!" data-start="2156" data-end="2193"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>/etc/init.d/v2ray start
+</span></span></code></div></div></pre>
+<p data-start="2195" data-end="2214" class="">然后查看 V2Ray 的运行状态：</p>
+<pre class="overflow-visible!" data-start="2216" data-end="2254"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>/etc/init.d/v2ray status
+</span></span></code></div></div></pre>
+<p data-start="2256" data-end="2288" class="">如果返回 "running"，说明 V2Ray 已成功启动。</p>
+<p data-start="2290" data-end="2383" class="">你还可以通过访问 <strong data-start="2299" data-end="2337"><a data-start="2301" data-end="2335" rel="noopener" target="_new" class="" href="https://www.whatismyipaddress.com/">https://www.whatismyipaddress.com/</a></strong> 检查 IP 地址是否发生变化。如果 IP 地址已更改，则说明 V2Ray 代理已生效。</p>
+<hr data-start="2385" data-end="2388" class="" style="">
+<h2 data-start="2390" data-end="2410" class=""><strong data-start="2393" data-end="2408">三、常见问题及解决方案</strong></h2>
+<h3 data-start="2412" data-end="2443" class=""><strong data-start="2416" data-end="2441">Q1：V2Ray 运行后仍然无法访问外网？</strong></h3>
+<p data-start="2444" data-end="2456" class=""><strong data-start="2444" data-end="2454">可能的原因：</strong></p>
+<ul data-start="2457" data-end="2494">
+<li data-start="2457" data-end="2470" class="" style="">
+<p data-start="2459" data-end="2470" class="">服务器信息输入错误</p>
+</li>
+<li data-start="2471" data-end="2483" class="" style="">
+<p data-start="2473" data-end="2483" class="">DNS 解析问题</p>
+</li>
+<li data-start="2484" data-end="2494" class="" style="">
+<p data-start="2486" data-end="2494" class="">ISP 封锁</p>
+</li>
+</ul>
+<p data-start="2496" data-end="2507" class=""><strong data-start="2496" data-end="2505">解决方案：</strong></p>
+<ul data-start="2508" data-end="2657">
+<li data-start="2508" data-end="2544" class="" style="">
+<p data-start="2510" data-end="2544" class="">确保 V2Ray 配置正确，特别是 UUID、端口、协议等信息。</p>
+</li>
+<li data-start="2545" data-end="2620" class="" style="">
+<p data-start="2547" data-end="2620" class="">更换 DNS 服务器，如 <code data-start="2560" data-end="2569">8.8.8.8</code> 和 <code data-start="2572" data-end="2581">1.1.1.1</code>，可以在 OpenWRT 的 <strong data-start="2596" data-end="2613">网络 → DHCP/DNS</strong> 中修改。</p>
+</li>
+<li data-start="2621" data-end="2657" class="" style="">
+<p data-start="2623" data-end="2657" class="">尝试使用 WebSocket + TLS 传输方式，提高伪装性。</p>
+</li>
+</ul>
+<hr data-start="2659" data-end="2662" class="" style="">
+<h3 data-start="2664" data-end="2694" class=""><strong data-start="2668" data-end="2692">Q2：如何提高 V2Ray 的连接速度？</strong></h3>
+<ul data-start="2695" data-end="2836">
+<li data-start="2695" data-end="2717" class="" style="">
+<p data-start="2697" data-end="2717" class="">选择地理位置较近的服务器，减少延迟。</p>
+</li>
+<li data-start="2718" data-end="2808" class="" style="">
+<p data-start="2720" data-end="2748" class="">启用 TCP Fast Open，提高连接建立速度：</p>
+<pre class="overflow-visible!" data-start="2752" data-end="2808"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span><span class="hljs-built_in">echo</span></span><span> 3 &gt; /proc/sys/net/ipv4/tcp_fastopen
+</span></span></code></div></div></pre>
+</li>
+<li data-start="2810" data-end="2836" class="" style="">
+<p data-start="2812" data-end="2836" class="">使用 CDN 进行流量中转，减少封锁的风险。</p>
+</li>
+</ul>
+<hr data-start="2838" data-end="2841" class="" style="">
+<h3 data-start="2843" data-end="2872" class=""><strong data-start="2847" data-end="2870">Q3：如何恢复 OpenWRT 设置？</strong></h3>
+<p data-start="2873" data-end="2908" class="">如果修改 V2Ray 配置后无法连接路由器，可以使用以下方法恢复：</p>
+<ul data-start="2909" data-end="3043">
+<li data-start="2909" data-end="2956" class="" style="">
+<p data-start="2911" data-end="2956" class="">进入 OpenWRT Web 界面，在 <strong data-start="2931" data-end="2945">系统 → 备份/恢复</strong> 中恢复备份文件。</p>
+</li>
+<li data-start="2957" data-end="3043" class="" style="">
+<p data-start="2959" data-end="2990" class="">如果无法访问 Web 界面，可以使用 SSH 连接后运行：</p>
+<pre class="overflow-visible!" data-start="2994" data-end="3028"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute right-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"><button class="flex gap-1 items-center select-none px-4 py-1" aria-label="复制"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z" fill="currentColor"></path></svg>复制</button></span><span class="" data-state="closed"><button class="flex items-center gap-1 px-4 py-1 select-none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs"><path d="M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 7L18.5 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>编辑</button></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>firstboot
+reboot
+</span></span></code></div></div></pre>
+<p data-start="3032" data-end="3043" class="">这将恢复出厂设置。</p>
+</li>
+</ul>
+<hr data-start="3045" data-end="3048" class="" style="">
+<h2 data-start="3050" data-end="3061" class=""><strong data-start="3053" data-end="3059">结语</strong></h2>
+<p data-start="3063" data-end="3147" class="">在 OpenWRT 上安装 V2Ray 插件，虽然涉及一定的技术操作，但通过本教程的指导，相信你可以顺利完成配置，使整个家庭网络都能享受更自由、更安全的互联网环境。</p>
+<p data-start="3149" data-end="3223" class="">通过合理选择服务器、优化网络设置、调整代理规则，你可以进一步提升 V2Ray 的性能，让你的 OpenWRT 路由器成为一个功能强大的网络中枢。</p>
+<p data-start="3225" data-end="3295" class="">如果在安装过程中遇到问题，欢迎加入 OpenWRT 和 V2Ray 相关的技术社区，与其他用户交流经验，共同探索更稳定、高效的科学上网方案！</p>                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92165.htm">Mac 用户必备：Clash X 完整安装与使用指南</a></p>
+                                        <p>下一个：<a href="/news/article-92845.htm">深入解析Surfboard节点：功能、优势与配置全面指南</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-83420.htm" title="Clash安卓应用添加节点全攻略：轻松实现高效科学上网">Clash安卓应用添加节点全攻略：轻松实现高效科学上网</a></li>
+                        <li class="py-2"><a href="/news/article-91117.htm" title="如何选择与使用科学上网服务器梯子：详细指南与实用技巧">如何选择与使用科学上网服务器梯子：详细指南与实用技巧</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-1-free-high-speed-nodes.htm" title="Free Clash V2ray | 4月1日19.5M/S|免费Shadowrocket/Clash/SSR/V2ray订阅节点">Free Clash V2ray | 4月1日19.5M/S|免费Shadowrocket/Clash/SSR/V2ray订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-92167.htm" title="OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案">OpenWRT 安装 V2Ray 插件全攻略：详细教程与问题解决方案</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-node-subscribe.htm" title="Free Clash V2ray | 3月28日19.8M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点">Free Clash V2ray | 3月28日19.8M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-92845.htm" title="深入解析Surfboard节点：功能、优势与配置全面指南">深入解析Surfboard节点：功能、优势与配置全面指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-free-v2ray.htm" title="Free Clash V2ray | 3月27日18.5M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点">Free Clash V2ray | 3月27日18.5M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-free-subscribe-node.htm" title="Free Clash V2ray | 3月30日21.5M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点">Free Clash V2ray | 3月30日21.5M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-84870.htm" title="完整指南：v2rayNG本地DNS设置方法与优化技巧">完整指南：v2rayNG本地DNS设置方法与优化技巧</a></li>
+                        <li class="py-2"><a href="/news/article-92846.htm" title="Clash官方版下载与安装全攻略：畅享科学上网的完美体验">Clash官方版下载与安装全攻略：畅享科学上网的完美体验</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container py-4">
+            <div class="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">Free Clash V2ray节点订阅官网</a> 版权所有 Powered by WordPress
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2raynodes/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2raynodes/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
