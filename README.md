@@ -1,4 +1,4 @@
-# Free Clash V2ray | 4月14日18.8M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点  更新时间 2025-04-14 08:24:46
+# Free Clash V2ray | 4月19日20.5M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点  更新时间 2025-04-19 09:18:33
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://free-clash-v2ray.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/04/0-20250414.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/04/1-20250414.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/04/2-20250414.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/04/3-20250414.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/04/4-20250414.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/04/0-20250419.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/04/1-20250419.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/04/2-20250419.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/04/3-20250419.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/04/4-20250419.yaml
 
 ### V2ray订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/04/0-20250414.txt
-- https://free-clash-v2ray.github.io/uploads/2025/04/1-20250414.txt
-- https://free-clash-v2ray.github.io/uploads/2025/04/2-20250414.txt
-- https://free-clash-v2ray.github.io/uploads/2025/04/3-20250414.txt
-- https://free-clash-v2ray.github.io/uploads/2025/04/4-20250414.txt
+- https://free-clash-v2ray.github.io/uploads/2025/04/0-20250419.txt
+- https://free-clash-v2ray.github.io/uploads/2025/04/1-20250419.txt
+- https://free-clash-v2ray.github.io/uploads/2025/04/2-20250419.txt
+- https://free-clash-v2ray.github.io/uploads/2025/04/3-20250419.txt
+- https://free-clash-v2ray.github.io/uploads/2025/04/4-20250419.txt
 
 ### Sing-box订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/04/20250414.json
+- https://free-clash-v2ray.github.io/uploads/2025/04/20250419.json
 
 ## 更多clash节点订阅 ：
 
