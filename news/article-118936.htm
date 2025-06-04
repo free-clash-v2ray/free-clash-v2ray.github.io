@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://free-clash-v2ray.github.io/news/article-118936.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>深度解析梅林V2Ray配置未通过测试的原因及全面解决方案</title>
+        <meta name="description" content="随着科学上网需求的日益增长，V2Ray作为一个强大且灵活的代理工具，因其支持多协议、多路由和高度定制化的特性，受到了广大网络用户和技术爱好者的追捧。而搭载了增强功能的梅林固件（AsusWRT-Merl" />
+        <link rel="icon" href="/assets/website/img/v2raynodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash V2ray节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://free-clash-v2ray.github.io/news/article-118936.htm" />
+    <meta property="og:site_name" content="Free Clash V2ray节点订阅官网" />
+    <meta property="og:title" content="深度解析梅林V2Ray配置未通过测试的原因及全面解决方案" />
+    <meta property="og:image" content="https://free-clash-v2ray.github.io/uploads/20240603/7fd04837464a7de57abd907f0d9a48b2.webp" />
+        <meta property="og:release_date" content="2025-05-27T10:00:45" />
+    <meta property="og:updated_time" content="2025-05-27T10:00:45" />
+        <meta property="og:description" content="随着科学上网需求的日益增长，V2Ray作为一个强大且灵活的代理工具，因其支持多协议、多路由和高度定制化的特性，受到了广大网络用户和技术爱好者的追捧。而搭载了增强功能的梅林固件（AsusWRT-Merl" />
+    
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深度解析梅林V2Ray配置未通过测试的原因及全面解决方案">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="/assets/website/css/v2raynodes/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BVCE9MTSXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BVCE9MTSXG');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo">
+                        <span>Free Clash V2ray</span>
+                        </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                                        <li><a class="nav-link" href="/">首页</a></li>
+                                        <li><a class="nav-link" href="/free-nodes/">免费节点</a></li>
+                                        <li><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                        <li><a class="nav-link" href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>深度解析梅林V2Ray配置未通过测试的原因及全面解决方案</h1>
+                </div>
+                <div>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="32" data-end="184">随着科学上网需求的日益增长，V2Ray作为一个强大且灵活的代理工具，因其支持多协议、多路由和高度定制化的特性，受到了广大网络用户和技术爱好者的追捧。而搭载了增强功能的梅林固件（AsusWRT-Merlin）则为V2Ray提供了极佳的运行环境，帮助用户实现路由器级别的代理服务，极大提升了网络安全与灵活性。</p>
+<p data-start="186" data-end="295">然而，在实际使用中，不少用户反馈“梅林V2Ray配置未通过测试”，导致无法正常连接网络，影响正常使用。本文将全面剖析梅林V2Ray配置失败的常见原因，并结合实际案例，提供系统且有效的解决方案，帮助大家快速恢复网络畅通。</p>
+<hr data-start="297" data-end="300">
+<h2 data-start="302" data-end="325">一、什么是V2Ray？科学上网的多面利器</h2>
+<p data-start="327" data-end="414">V2Ray是一个开源的网络代理工具，专注于实现灵活、强大且安全的网络通信。它支持多种传输协议和路由策略，能够应对复杂多变的网络环境，广泛应用于翻墙、隐私保护、网络加速等场景。</p>
+<p data-start="416" data-end="423">核心优势包括：</p>
+<ul data-start="425" data-end="585">
+<li data-start="425" data-end="468">
+<p data-start="427" data-end="468"><strong data-start="427" data-end="436">多协议支持</strong>：HTTP、SOCKS5、Shadowsocks、VMess等；</p>
+</li>
+<li data-start="469" data-end="508">
+<p data-start="471" data-end="508"><strong data-start="471" data-end="480">高度定制化</strong>：用户可通过配置文件自定义流量路由、加密方式、传输参数；</p>
+</li>
+<li data-start="509" data-end="554">
+<p data-start="511" data-end="554"><strong data-start="511" data-end="520">多平台兼容</strong>：支持Windows、macOS、Linux、iOS及路由器固件等；</p>
+</li>
+<li data-start="555" data-end="585">
+<p data-start="557" data-end="585"><strong data-start="557" data-end="566">模块化设计</strong>：各功能模块相互独立，易于扩展与调试。</p>
+</li>
+</ul>
+<p data-start="587" data-end="627">V2Ray让用户能够在保证安全隐私的同时，突破地域限制，实现自由访问全球互联网。</p>
+<hr data-start="629" data-end="632">
+<h2 data-start="634" data-end="657">二、梅林固件简介：路由器上的“超级大脑”</h2>
+<p data-start="659" data-end="752">梅林固件是基于华硕官方AsusWRT固件开发的第三方固件，增强了路由器的功能和性能。它不仅稳定可靠，还支持丰富的插件管理，包括VPN客户端、广告屏蔽及科学上网工具（如V2Ray）的集成。</p>
+<p data-start="754" data-end="814">使用梅林固件安装V2Ray插件后，用户无需在每台设备上单独配置代理，整个家庭网络都能享受加速与保护，大大简化了使用门槛。</p>
+<hr data-start="816" data-end="819">
+<h2 data-start="821" data-end="840">三、梅林V2Ray的基本配置流程</h2>
+<p data-start="842" data-end="867">在梅林固件上成功运行V2Ray，一般遵循以下步骤：</p>
+<ol data-start="869" data-end="1110">
+<li data-start="869" data-end="924">
+<p data-start="872" data-end="924"><strong data-start="872" data-end="885">安装V2Ray插件</strong><br data-start="885" data-end="888">
+在梅林固件的插件管理页面，下载安装官方或社区提供的V2Ray插件。</p>
+</li>
+<li data-start="926" data-end="1004">
+<p data-start="929" data-end="1004"><strong data-start="929" data-end="939">填写配置文件</strong><br data-start="939" data-end="942">
+通过梅林固件Web管理界面，进入V2Ray插件配置页，填写服务器地址、端口号、UUID、加密方式、传输协议等关键参数。</p>
+</li>
+<li data-start="1006" data-end="1057">
+<p data-start="1009" data-end="1057"><strong data-start="1009" data-end="1022">启用V2Ray服务</strong><br data-start="1022" data-end="1025">
+配置完成后，启动V2Ray服务，确保插件状态为“运行中”。</p>
+</li>
+<li data-start="1059" data-end="1110">
+<p data-start="1062" data-end="1110"><strong data-start="1062" data-end="1072">测试连接状态</strong><br data-start="1072" data-end="1075">
+使用自带的测试功能或第三方工具检查V2Ray是否成功连接服务器。</p>
+</li>
+</ol>
+<hr data-start="1112" data-end="1115">
+<h2 data-start="1117" data-end="1141">四、梅林V2Ray配置未通过测试的原因分析</h2>
+<p data-start="1143" data-end="1170">配置完成却未能通过测试，主要原因往往涉及以下几个方面：</p>
+<h3 data-start="1172" data-end="1188">1. 服务器地址错误</h3>
+<ul data-start="1189" data-end="1246">
+<li data-start="1189" data-end="1216">
+<p data-start="1191" data-end="1216">服务器IP地址或域名填写错误，导致无法解析或连接；</p>
+</li>
+<li data-start="1217" data-end="1246">
+<p data-start="1219" data-end="1246">使用动态IP而非稳定的域名，IP变动频繁导致连接失败。</p>
+</li>
+</ul>
+<h3 data-start="1248" data-end="1263">2. 端口设置不当</h3>
+<ul data-start="1264" data-end="1303">
+<li data-start="1264" data-end="1286">
+<p data-start="1266" data-end="1286">服务器端口未正确设置，或者被防火墙阻挡；</p>
+</li>
+<li data-start="1287" data-end="1303">
+<p data-start="1289" data-end="1303">路由器本地端口冲突或未开放。</p>
+</li>
+</ul>
+<h3 data-start="1305" data-end="1322">3. UUID填写错误</h3>
+<ul data-start="1323" data-end="1368">
+<li data-start="1323" data-end="1350">
+<p data-start="1325" data-end="1350">UUID不符合格式（标准为32位16进制字符串）；</p>
+</li>
+<li data-start="1351" data-end="1368">
+<p data-start="1353" data-end="1368">复制粘贴时包含空格或错误字符。</p>
+</li>
+</ul>
+<h3 data-start="1370" data-end="1386">4. DNS解析问题</h3>
+<ul data-start="1387" data-end="1441">
+<li data-start="1387" data-end="1420">
+<p data-start="1389" data-end="1420">路由器或本地DNS缓存错误，无法正确解析V2Ray服务器域名；</p>
+</li>
+<li data-start="1421" data-end="1441">
+<p data-start="1423" data-end="1441">使用的DNS服务器响应缓慢或被污染。</p>
+</li>
+</ul>
+<h3 data-start="1443" data-end="1458">5. 网络连接问题</h3>
+<ul data-start="1459" data-end="1489">
+<li data-start="1459" data-end="1475">
+<p data-start="1461" data-end="1475">路由器与服务器间网络不通畅；</p>
+</li>
+<li data-start="1476" data-end="1489">
+<p data-start="1478" data-end="1489">本地ISP限制或故障。</p>
+</li>
+</ul>
+<h3 data-start="1491" data-end="1507">6. 防火墙配置不当</h3>
+<ul data-start="1508" data-end="1551">
+<li data-start="1508" data-end="1534">
+<p data-start="1510" data-end="1534">本地或服务器端防火墙未放行V2Ray使用的端口；</p>
+</li>
+<li data-start="1535" data-end="1551">
+<p data-start="1537" data-end="1551">路由器安全策略阻止相关流量。</p>
+</li>
+</ul>
+<hr data-start="1553" data-end="1556">
+<h2 data-start="1558" data-end="1584">五、解决梅林V2Ray配置未通过测试的具体方法</h2>
+<p data-start="1586" data-end="1610">针对以上问题，下面给出一套实用的排查与解决思路：</p>
+<h3 data-start="1612" data-end="1631">1. 核实服务器地址和端口</h3>
+<ul data-start="1632" data-end="1728">
+<li data-start="1632" data-end="1677">
+<p data-start="1634" data-end="1677">使用命令行工具（如ping、nslookup）测试服务器是否在线且DNS解析正常；</p>
+</li>
+<li data-start="1678" data-end="1704">
+<p data-start="1680" data-end="1704">优先使用服务器提供的域名，避免使用动态IP；</p>
+</li>
+<li data-start="1705" data-end="1728">
+<p data-start="1707" data-end="1728">确认端口号正确，且服务器端已开放对应端口。</p>
+</li>
+</ul>
+<h3 data-start="1730" data-end="1749">2. 确认UUID格式正确</h3>
+<ul data-start="1750" data-end="1846">
+<li data-start="1750" data-end="1798">
+<p data-start="1752" data-end="1798">通过权威UUID生成器生成新的UUID（推荐使用 uuidgenerator.com）；</p>
+</li>
+<li data-start="1799" data-end="1819">
+<p data-start="1801" data-end="1819">复制时注意避免多余空格或换行符；</p>
+</li>
+<li data-start="1820" data-end="1846">
+<p data-start="1822" data-end="1846">确认配置文件中UUID字段严格匹配服务器端设置。</p>
+</li>
+</ul>
+<h3 data-start="1848" data-end="1864">3. 优化DNS设置</h3>
+<ul data-start="1865" data-end="1974">
+<li data-start="1865" data-end="1934">
+<p data-start="1867" data-end="1934">在梅林固件中更换DNS服务器为Google DNS（8.8.8.8）、Cloudflare DNS（1.1.1.1）等公用DNS；</p>
+</li>
+<li data-start="1935" data-end="1956">
+<p data-start="1937" data-end="1956">清理DNS缓存或重启路由器后重试；</p>
+</li>
+<li data-start="1957" data-end="1974">
+<p data-start="1959" data-end="1974">避免使用被污染的DNS服务器。</p>
+</li>
+</ul>
+<h3 data-start="1976" data-end="1995">4. 检查防火墙及端口转发</h3>
+<ul data-start="1996" data-end="2087">
+<li data-start="1996" data-end="2031">
+<p data-start="1998" data-end="2031">关闭路由器和服务器上的防火墙测试连接，确认是否防火墙导致阻断；</p>
+</li>
+<li data-start="2032" data-end="2062">
+<p data-start="2034" data-end="2062">在路由器中设置端口转发，确保V2Ray端口正常开放；</p>
+</li>
+<li data-start="2063" data-end="2087">
+<p data-start="2065" data-end="2087">确认路由器安全策略未误杀V2Ray相关流量。</p>
+</li>
+</ul>
+<h3 data-start="2089" data-end="2110">5. 更新V2Ray及插件版本</h3>
+<ul data-start="2111" data-end="2173">
+<li data-start="2111" data-end="2146">
+<p data-start="2113" data-end="2146">定期检查并升级V2Ray核心程序及梅林插件，避免版本兼容问题；</p>
+</li>
+<li data-start="2147" data-end="2173">
+<p data-start="2149" data-end="2173">可访问V2Ray官方GitHub获取最新发行版。</p>
+</li>
+</ul>
+<h3 data-start="2175" data-end="2196">6. 采用其他测试工具辅助诊断</h3>
+<ul data-start="2197" data-end="2254">
+<li data-start="2197" data-end="2228">
+<p data-start="2199" data-end="2228">使用V2Ray客户端或第三方网络检测工具进行连接测试；</p>
+</li>
+<li data-start="2229" data-end="2254">
+<p data-start="2231" data-end="2254">对比客户端与路由器配置是否一致，排除配置差异。</p>
+</li>
+</ul>
+<hr data-start="2256" data-end="2259">
+<h2 data-start="2261" data-end="2277">六、常见问题答疑（FAQ）</h2>
+<p data-start="2279" data-end="2356"><strong data-start="2279" data-end="2309">Q1：梅林V2Ray配置测试失败最常见的原因是什么？</strong><br data-start="2309" data-end="2312">
+A：服务器地址或端口错误、UUID格式不正确、防火墙阻止连接、DNS解析失败为主要原因。</p>
+<p data-start="2358" data-end="2433"><strong data-start="2358" data-end="2379">Q2：如何检查V2Ray连接状态？</strong><br data-start="2379" data-end="2382">
+A：可使用ping、traceroute检测网络稳定性，利用V2Ray自带监控工具查看日志和连接状态。</p>
+<p data-start="2435" data-end="2503"><strong data-start="2435" data-end="2457">Q3：如何获取最新的V2Ray版本？</strong><br data-start="2457" data-end="2460">
+A：访问V2Ray官方GitHub仓库下载最新版本，保持软件更新以避免漏洞和兼容问题。</p>
+<p data-start="2505" data-end="2580"><strong data-start="2505" data-end="2524">Q4：UUID如何生成和验证？</strong><br data-start="2524" data-end="2527">
+A：使用uuidgenerator.com等工具在线生成，确认格式为32位16进制字符，避免手动输入错误。</p>
+<p data-start="2582" data-end="2649"><strong data-start="2582" data-end="2605">Q5：梅林固件如何确保支持V2Ray？</strong><br data-start="2605" data-end="2608">
+A：使用支持V2Ray插件的梅林固件版本，并按照官方或社区教程正确安装和配置插件。</p>
+<p data-start="2651" data-end="2717"><strong data-start="2651" data-end="2671">Q6：配置问题仍未解决，怎么办？</strong><br data-start="2671" data-end="2674">
+A：建议在V2Ray和梅林相关社区发帖求助，或联系你的V2Ray服务器提供商获取支持。</p>
+<hr data-start="2719" data-end="2722">
+<h2 data-start="2724" data-end="2747">七、总结：细节决定成败，精细配置铸就畅通</h2>
+<p data-start="2749" data-end="2842">“梅林V2Ray配置未通过测试”问题，虽然让不少用户头疼，但归根到底往往是细节疏忽造成。服务器地址、端口、UUID、DNS、防火墙等配置的准确性和合理性，是确保V2Ray稳定运行的关键。</p>
+<p data-start="2844" data-end="2930">通过本文的详细解析和系统排查方案，相信你能更快速准确地定位问题并加以解决。保持软件更新，谨慎配置细节，才能发挥出梅林固件和V2Ray的强大潜力，实现真正安全自由的网络体验。</p>
+<hr data-start="2932" data-end="2935">
+<h2 data-start="2937" data-end="2966">点评：深度细节与实战经验的完美结合，技术控的必读指南</h2>
+<p data-start="2968" data-end="3039">本文以清晰的逻辑结构，将技术细节与实际应用无缝衔接，不仅帮助用户理解V2Ray和梅林固件的基本原理，更注重实操性，给出具体解决方案和排查方法。</p>
+<p data-start="3041" data-end="3120">这不仅是一篇普通的故障排查文章，而是一本技术控和高阶用户必备的“使用宝典”。它直击痛点，语言简洁明了，却又不失深度与权威，适合从入门到进阶的各类用户反复研读。</p>
+<p data-start="3122" data-end="3178" data-is-last-node="" data-is-only-node="">对于追求高质量网络体验的用户而言，这样的文章正是技术与实践的桥梁，堪称V2Ray爱好者和梅林固件用户的珍贵资源。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-118622.htm">2018年科学上网工具全解析：助你自由畅游网络世界的最佳选择</a></p>
+                                        <p>下一个：<a href="/news/article-119238.htm">Surfboard安卓深度指南：从安装到高级配置的全方位教程</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-110846.htm" title="打造你的专属安全网络：全面解析如何通过路由器部署 V2Ray">打造你的专属安全网络：全面解析如何通过路由器部署 V2Ray</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-6-4-free-v2ray.htm" title="Free Clash V2ray | 6月4日21.4M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点">Free Clash V2ray | 6月4日21.4M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-112800.htm" title="小火箭导入vmess链接完整教程：一步步教你设置">小火箭导入vmess链接完整教程：一步步教你设置</a></li>
+                        <li class="py-2"><a href="/news/article-110842.htm" title="深入解析召唤师Clash：游戏玩法、策略与胜利之道">深入解析召唤师Clash：游戏玩法、策略与胜利之道</a></li>
+                        <li class="py-2"><a href="/news/article-117418.htm" title="大狗与V2Ray深度解析：选择最适合你的网络代理利器">大狗与V2Ray深度解析：选择最适合你的网络代理利器</a></li>
+                        <li class="py-2"><a href="/news/article-119238.htm" title="Surfboard安卓深度指南：从安装到高级配置的全方位教程">Surfboard安卓深度指南：从安装到高级配置的全方位教程</a></li>
+                        <li class="py-2"><a href="/news/article-112803.htm" title="探索无界网络：科学上网软件助你畅游百度贴吧全攻略">探索无界网络：科学上网软件助你畅游百度贴吧全攻略</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-6-3-node-share.htm" title="Free Clash V2ray | 6月3日20.9M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点">Free Clash V2ray | 6月3日20.9M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-115242.htm" title="高性价比V2Ray机场选择指南：为你解锁最佳网络体验">高性价比V2Ray机场选择指南：为你解锁最佳网络体验</a></li>
+                        <li class="py-2"><a href="/news/article-114034.htm" title="手机上配置Clash：一站式详细教程与常见问题解答">手机上配置Clash：一站式详细教程与常见问题解答</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-06/" title="2025-06 归档">2025-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+    </main><!-- End #main -->
+        <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container py-4">
+            <div class="copyright">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <a href="/">Free Clash V2ray节点订阅官网</a> 版权所有 Powered by WordPress
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="/assets/website/js/frontend/v2raynodes/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/php-email-form/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/purecounter/purecounter.js"></script>
+    <script src="/assets/website/js/frontend/v2raynodes/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="/assets/website/js/frontend/v2raynodes/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
