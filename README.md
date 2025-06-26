@@ -1,4 +1,4 @@
-# Free Clash V2ray | 6月20日21.8M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点  更新时间 2025-06-20 10:25:04
+# Free Clash V2ray | 6月26日18.1M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点  更新时间 2025-06-26 09:20:17
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://free-clash-v2ray.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/06/0-20250620.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/06/1-20250620.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/06/2-20250620.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/06/3-20250620.yaml
-- https://free-clash-v2ray.github.io/uploads/2025/06/4-20250620.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/06/0-20250626.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/06/1-20250626.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/06/2-20250626.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/06/3-20250626.yaml
+- https://free-clash-v2ray.github.io/uploads/2025/06/4-20250626.yaml
 
 ### V2ray订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/06/0-20250620.txt
-- https://free-clash-v2ray.github.io/uploads/2025/06/1-20250620.txt
-- https://free-clash-v2ray.github.io/uploads/2025/06/2-20250620.txt
-- https://free-clash-v2ray.github.io/uploads/2025/06/3-20250620.txt
-- https://free-clash-v2ray.github.io/uploads/2025/06/4-20250620.txt
+- https://free-clash-v2ray.github.io/uploads/2025/06/0-20250626.txt
+- https://free-clash-v2ray.github.io/uploads/2025/06/1-20250626.txt
+- https://free-clash-v2ray.github.io/uploads/2025/06/2-20250626.txt
+- https://free-clash-v2ray.github.io/uploads/2025/06/3-20250626.txt
+- https://free-clash-v2ray.github.io/uploads/2025/06/4-20250626.txt
 
 ### Sing-box订阅链接
 
-- https://free-clash-v2ray.github.io/uploads/2025/06/20250620.json
+- https://free-clash-v2ray.github.io/uploads/2025/06/20250626.json
 
 ## 更多clash节点订阅 ：
 
