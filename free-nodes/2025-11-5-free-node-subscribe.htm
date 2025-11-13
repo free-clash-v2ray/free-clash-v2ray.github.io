@@ -244,9 +244,19 @@ x浏览器科学上网版宛如一把开启网络自由的利剑，轻盈而锋�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 节点手动切换有什么优势？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 的 JSON 配置文件常见语法错误如何快速定位？</h5></div>
     <div class="panel-body">
-        手动切换节点可以让用户根据网络延迟和用途选择最合适的节点，适合在节点不稳定或特殊访问需求下使用。虽然不自动，但可以灵活调整，提高访问效率。<hr />    </div>
+        通过 JSON 校验工具或编辑器（例如 VSCode）打开配置文件，查看语法高亮与错误提示；也可运行 sing-box 并观察控制台错误信息，错误通常会指出第几行或哪个字段不合法以便修正。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的协议和混淆如何影响连接稳定性？</h5></div>
+    <div class="panel-body">
+        不同协议和混淆方式对抗 DPI 和封锁能力不同。合理选择可隐藏真实流量特征，减少被封锁风险，提高连接稳定性和访问速度，确保节点长期可用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的伪装域名配置需要注意什么？</h5></div>
+    <div class="panel-body">
+        伪装域名必须真实可访问并有有效证书，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁风险，保证节点长期稳定可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
@@ -254,9 +264,9 @@ x浏览器科学上网版宛如一把开启网络自由的利剑，轻盈而锋�
         通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何结合规则实现智能节点切换？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 使用 WebSocket + TLS 有哪些优势？</h5></div>
     <div class="panel-body">
-        Surfboard 可根据规则文件和策略组自动选择延迟低、稳定性高的节点处理流量。不同应用流量可分配不同节点，优化访问速度和稳定性，减少手动切换节点的操作。<hr />    </div>
+        WebSocket + TLS 可将 V2Ray 流量伪装成 HTTPS 请求，隐藏真实通信特征。结合域名伪装和策略组使用，可以有效绕过封锁，提高节点安全性和连接稳定性，保持长期稳定访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何配置 Clash 的 GEOIP 分流？</h5></div>
@@ -269,29 +279,19 @@ x浏览器科学上网版宛如一把开启网络自由的利剑，轻盈而锋�
         在 Mihomo 的配置文件中启用 `tun:` 模块并安装系统驱动即可实现全局代理。TUN 模式可将所有系统流量导向代理核心，实现真正意义上的全局加速。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名配置需要注意什么？</h5></div>
+    <div class="panel-heading"><h5>Potatso Lite 节点手动切换有什么优势？</h5></div>
     <div class="panel-body">
-        伪装域名必须真实可访问并有有效证书，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁风险，保证节点长期稳定可用。<hr />    </div>
+        手动切换节点可以让用户根据网络延迟和用途选择最合适的节点，适合在节点不稳定或特殊访问需求下使用。虽然不自动，但可以灵活调整，提高访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 使用 WebSocket + TLS 有哪些优势？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 如何结合规则实现智能节点切换？</h5></div>
     <div class="panel-body">
-        WebSocket + TLS 可将 V2Ray 流量伪装成 HTTPS 请求，隐藏真实通信特征。结合域名伪装和策略组使用，可以有效绕过封锁，提高节点安全性和连接稳定性，保持长期稳定访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议和混淆如何影响连接稳定性？</h5></div>
-    <div class="panel-body">
-        不同协议和混淆方式对抗 DPI 和封锁能力不同。合理选择可隐藏真实流量特征，减少被封锁风险，提高连接稳定性和访问速度，确保节点长期可用。<hr />    </div>
+        Surfboard 可根据规则文件和策略组自动选择延迟低、稳定性高的节点处理流量。不同应用流量可分配不同节点，优化访问速度和稳定性，减少手动切换节点的操作。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何为不同用户设置流量限制？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户设置独立带宽限制和流量配额。超过限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提升整体网络效率和公平性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的 JSON 配置文件常见语法错误如何快速定位？</h5></div>
-    <div class="panel-body">
-        通过 JSON 校验工具或编辑器（例如 VSCode）打开配置文件，查看语法高亮与错误提示；也可运行 sing-box 并观察控制台错误信息，错误通常会指出第几行或哪个字段不合法以便修正。    </div>
+        管理员可为每个用户设置独立带宽限制和流量配额。超过限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提升整体网络效率和公平性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -320,16 +320,16 @@ x浏览器科学上网版宛如一把开启网络自由的利剑，轻盈而锋�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-free-clash-subscribe.htm" title="Free Clash V2ray | 10月19日19.7M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月19日19.7M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-node-share.htm" title="Free Clash V2ray | 10月17日22M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点">Free Clash V2ray | 10月17日22M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-clash-windows.htm" title="Free Clash V2ray | 10月12日20.5M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月12日20.5M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-13-free-ssr-subscribe.htm" title="Free Clash V2ray | 10月13日18.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点订阅节点">Free Clash V2ray | 10月13日18.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-clash-subscribe.htm" title="Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-free-node-subscribe.htm" title="Free Clash V2ray | 11月5日21.5M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 11月5日21.5M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-free-clash.htm" title="Free Clash V2ray | 10月27日22.1M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点">Free Clash V2ray | 10月27日22.1M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-16-shadowrocket-node.htm" title="Free Clash V2ray | 10月16日19.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点">Free Clash V2ray | 10月16日19.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-3-free-ssr-subscribe.htm" title="Free Clash V2ray | 11月3日22.1M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 11月3日22.1M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-clash-v2ray-ss-ssr.htm" title="Free Clash V2ray | 10月23日18M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点订阅节点">Free Clash V2ray | 10月23日18M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-2-shadowrocket-node.htm" title="Free Clash V2ray | 11月2日22.8M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点">Free Clash V2ray | 11月2日22.8M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-clash-subscribe.htm" title="Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-24-free-subscribe-node.htm" title="Free Clash V2ray | 10月24日20.1M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点">Free Clash V2ray | 10月24日20.1M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-7-clash-node-daily-updates.htm" title="Free Clash V2ray | 10月7日20.4M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月7日20.4M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-shadowrocket-node.htm" title="Free Clash V2ray | 11月12日19.5M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点">Free Clash V2ray | 11月12日19.5M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-free-ssr-subscribe.htm" title="Free Clash V2ray | 10月9日20.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点">Free Clash V2ray | 10月9日20.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-6-clash-node.htm" title="Free Clash V2ray | 10月6日22M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 10月6日22M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-clash-node.htm" title="Free Clash V2ray | 11月6日20.4M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 11月6日20.4M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-node-subscribe.htm" title="Free Clash V2ray | 11月13日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 11月13日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点</a></li>
                     </ul>
     </div>
 </div>
@@ -341,7 +341,7 @@ x浏览器科学上网版宛如一把开启网络自由的利剑，轻盈而锋�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
