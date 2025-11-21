@@ -237,14 +237,34 @@ XR500配备了先进的网络优化技术，例如Geo-Filter、Ping Heatmap等�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 服务端出现 handshake timeout 如何处理？</h5></div>
+    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
     <div class="panel-body">
-        该错误通常由网络延迟或证书配置不一致导致。请检查服务器带宽是否充足、TLS 证书链完整，并确保客户端 SNI 与证书匹配。必要时更换节点或优化拥塞控制算法。<hr />    </div>
+        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow TUN 模式如何拦截全局流量？</h5></div>
+    <div class="panel-body">
+        TUN 模式会拦截系统 IP 层的所有流量，实现全局代理。相比 SOCKS5 只影响部分应用，TUN 可以覆盖游戏、视频和浏览器等所有流量，提高科学上网体验的全面性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 策略组如何根据延迟自动切换节点？</h5></div>
+    <div class="panel-body">
+        策略组会根据节点延迟和丢包率选择最佳节点。结合路由规则，可保证国内流量直连、海外流量走最优节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 如何管理不同协议节点？</h5></div>
     <div class="panel-body">
         Nekobox 可以同时管理 Shadowsocks、VMess、Trojan 等多种协议节点。结合策略组和分流规则，可实现不同流量走不同节点，提升网络效率和管理便利性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
+    <div class="panel-body">
+        Matsuri 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。用户无需手动切换节点，即可保持高速访问，提高网页、视频和游戏体验的稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 用户流量配额如何设置？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户设置带宽和流量上限，超出限制时可降速或阻止访问。确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和使用效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 节点分组如何自动切换？</h5></div>
@@ -257,34 +277,14 @@ XR500配备了先进的网络优化技术，例如Geo-Filter、Ping Heatmap等�
         Clash.Meta 是社区优化版本，支持更多传输协议，如 Hysteria、TUIC、Reality 等。它还增强了 DNS 处理逻辑和脚本分流能力，适合追求极致速度和灵活规则配置的高级用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 用户流量配额如何设置？</h5></div>
-    <div class="panel-body">
-        管理员可为每个用户设置带宽和流量上限，超出限制时可降速或阻止访问。确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和使用效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
-    <div class="panel-body">
-        Matsuri 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。用户无需手动切换节点，即可保持高速访问，提高网页、视频和游戏体验的稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 策略组如何根据延迟自动切换节点？</h5></div>
-    <div class="panel-body">
-        策略组会根据节点延迟和丢包率选择最佳节点。结合路由规则，可保证国内流量直连、海外流量走最优节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
-    <div class="panel-body">
-        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 中的多入口（inbounds）配置有什么用？</h5></div>
     <div class="panel-body">
         V2Ray 支持多入口配置，可以同时开启 HTTP、Socks、TUN 等多种代理方式，方便不同程序接入。通过设置不同端口，用户可实现局域网共享或分离不同流量来源。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow TUN 模式如何拦截全局流量？</h5></div>
+    <div class="panel-heading"><h5>Trojan 服务端出现 handshake timeout 如何处理？</h5></div>
     <div class="panel-body">
-        TUN 模式会拦截系统 IP 层的所有流量，实现全局代理。相比 SOCKS5 只影响部分应用，TUN 可以覆盖游戏、视频和浏览器等所有流量，提高科学上网体验的全面性。    </div>
+        该错误通常由网络延迟或证书配置不一致导致。请检查服务器带宽是否充足、TLS 证书链完整，并确保客户端 SNI 与证书匹配。必要时更换节点或优化拥塞控制算法。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -313,16 +313,16 @@ XR500配备了先进的网络优化技术，例如Geo-Filter、Ping Heatmap等�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-10-17-node-share.htm" title="Free Clash V2ray | 10月17日22M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点">Free Clash V2ray | 10月17日22M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-ssr-node.htm" title="Free Clash V2ray | 11月8日19.7M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点">Free Clash V2ray | 11月8日19.7M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-clash-subscribe.htm" title="Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月8日18.6M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-17-free-node-subscribe-links.htm" title="Free Clash V2ray | 11月17日18.5M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点">Free Clash V2ray | 11月17日18.5M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-25-free-shadowrocket-node.htm" title="Free Clash V2ray | 10月25日21.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点订阅节点">Free Clash V2ray | 10月25日21.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-14-free-ssr-subscribe.htm" title="Free Clash V2ray | 10月14日22M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点">Free Clash V2ray | 10月14日22M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-16-shadowrocket-node.htm" title="Free Clash V2ray | 10月16日19.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点">Free Clash V2ray | 10月16日19.2M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-6-clash-node.htm" title="Free Clash V2ray | 10月6日22M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 10月6日22M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-27-free-clash.htm" title="Free Clash V2ray | 10月27日22.1M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点">Free Clash V2ray | 10月27日22.1M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-11-free-clash-subscribe.htm" title="Free Clash V2ray | 10月11日22.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点订阅节点">Free Clash V2ray | 10月11日22.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-18-clash-node.htm" title="Free Clash V2ray | 10月18日22.4M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点订阅节点">Free Clash V2ray | 10月18日22.4M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-shadowrocket-node.htm" title="Free Clash V2ray | 11月2日22.8M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点">Free Clash V2ray | 11月2日22.8M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-9-free-ssr-subscribe.htm" title="Free Clash V2ray | 10月9日20.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点">Free Clash V2ray | 10月9日20.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-node-share-links.htm" title="Free Clash V2ray | 10月15日20.4M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点">Free Clash V2ray | 10月15日20.4M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-7-clash-node-daily-updates.htm" title="Free Clash V2ray | 10月7日20.4M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点">Free Clash V2ray | 10月7日20.4M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-10-free-shadowrocket-node.htm" title="Free Clash V2ray | 11月10日19.2M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 11月10日19.2M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-ssr-node.htm" title="Free Clash V2ray | 11月11日20.5M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 11月11日20.5M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-9-free-clash.htm" title="Free Clash V2ray | 11月9日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点">Free Clash V2ray | 11月9日22.8M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-15-clash-node.htm" title="Free Clash V2ray | 11月15日21.6M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点">Free Clash V2ray | 11月15日21.6M/S|免费Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点</a></li>
                     </ul>
     </div>
 </div>
@@ -334,7 +334,7 @@ XR500配备了先进的网络优化技术，例如Geo-Filter、Ping Heatmap等�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
