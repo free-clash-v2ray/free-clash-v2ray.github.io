@@ -271,9 +271,29 @@ Windows 用户可尝试关闭系统代理再开启；Mac 用户可重启 network
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式有什么优势？</h5></div>
+    <div class="panel-body">
+        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问环境，提高网络访问速度和稳定性，同时减少误操作导致的访问失败。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 节点测速功能如何优化游戏体验？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 会定期测速节点延迟和丢包率，并结合策略组自动切换最佳节点。保证游戏流量走低延迟节点，减少延迟和掉线，提高游戏流畅度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
+    <div class="panel-body">
+        XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
     <div class="panel-body">
         在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多出口功能如何使用？</h5></div>
+    <div class="panel-body">
+        WinXray 支持同时配置多个 outbound 节点，并通过路由规则或策略组选择不同出口。这样可以根据流量类型或目的地自动选择节点，实现灵活分流和负载均衡。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 的传输效率比 Trojan 高吗？</h5></div>
@@ -286,39 +306,19 @@ Windows 用户可尝试关闭系统代理再开启；Mac 用户可重启 network
         推荐使用可信 CA 签发的证书（例如 Let's Encrypt），并为服务器配置正确的域名、SNI 与证书链。避免使用自签名证书或错误域名，以免被客户端拒绝或被中间人攻击检测到。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
-    <div class="panel-body">
-        用户可添加订阅 URL，Nekoray 定期自动下载并更新节点。这样可保持节点列表最新，有效减少手动维护，提高使用效率，同时保证网络连接稳定和可靠。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 是否支持订阅自动更新？</h5></div>
     <div class="panel-body">
         是的，WinXray 支持定时订阅更新。用户可在设置中开启自动更新周期（如每天或每小时），程序会自动下载新节点并替换旧配置，确保使用最新的线路资源。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
+    <div class="panel-body">
+        用户可添加订阅 URL，Nekoray 定期自动下载并更新节点。这样可保持节点列表最新，有效减少手动维护，提高使用效率，同时保证网络连接稳定和可靠。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 支持哪些协议？</h5></div>
     <div class="panel-body">
-        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式有什么优势？</h5></div>
-    <div class="panel-body">
-        PAC 模式可根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问环境，提高网络访问速度和稳定性，同时减少误操作导致的访问失败。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
-    <div class="panel-body">
-        XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多出口功能如何使用？</h5></div>
-    <div class="panel-body">
-        WinXray 支持同时配置多个 outbound 节点，并通过路由规则或策略组选择不同出口。这样可以根据流量类型或目的地自动选择节点，实现灵活分流和负载均衡。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点测速功能如何优化游戏体验？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会定期测速节点延迟和丢包率，并结合策略组自动切换最佳节点。保证游戏流量走低延迟节点，减少延迟和掉线，提高游戏流畅度和稳定性。    </div>
+        Clash 支持多种主流代理协议，包括 VMess、VLess、Trojan、Shadowsocks、Snell、Socks5 等。通过配置文件或订阅源，用户可以灵活组合不同协议的节点，实现复杂的分流策略与优先级控制。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -347,16 +347,16 @@ Windows 用户可尝试关闭系统代理再开启；Mac 用户可重启 network
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-9-node-share-links.htm" title="Free Clash V2ray | 4月9日22M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点">Free Clash V2ray | 4月9日22M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-11-free-shadowrocket-node.htm" title="Free Clash V2ray | 4月11日21.8M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点">Free Clash V2ray | 4月11日21.8M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-free-node-subscribe.htm" title="Free Clash V2ray | 4月18日19.4M/S|免费SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点订阅节点">Free Clash V2ray | 4月18日19.4M/S|免费SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-25-clash-node.htm" title="Free Clash V2ray | 4月25日18.8M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点">Free Clash V2ray | 4月25日18.8M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-17-clash-windows.htm" title="Free Clash V2ray | 4月17日21.8M/S|免费Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 4月17日21.8M/S|免费Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-free-node-subscribe.htm" title="Free Clash V2ray | 5月9日22.9M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 5月9日22.9M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-22-free-v2ray-subscribe.htm" title="Free Clash V2ray | 4月22日19M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅节点">Free Clash V2ray | 4月22日19M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-13-free-shadowrocket-node.htm" title="Free Clash V2ray | 4月13日18M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Trojan节点订阅节点">Free Clash V2ray | 4月13日18M/S|免费Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Trojan节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-5-clash-windows.htm" title="Free Clash V2ray | 5月5日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点">Free Clash V2ray | 5月5日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-21-node-share.htm" title="Free Clash V2ray | 4月21日22.6M/S|免费Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点">Free Clash V2ray | 4月21日22.6M/S|免费Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-2-clash-node-daily-updates.htm" title="Free Clash V2ray | 5月2日22M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点">Free Clash V2ray | 5月2日22M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-23-free-ssr-subscribe.htm" title="Free Clash V2ray | 4月23日20.1M/S|免费V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点订阅节点">Free Clash V2ray | 4月23日20.1M/S|免费V2ray节点/SSR节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-4-clash-v2ray-ss-ssr.htm" title="Free Clash V2ray | 3月4日21.6M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点">Free Clash V2ray | 3月4日21.6M/S|免费Trojan节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-21-free-clash.htm" title="Free Clash V2ray | 3月21日20.5M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 3月21日20.5M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-25-free-clash-subscribe.htm" title="Free Clash V2ray | 3月25日19.6M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅节点">Free Clash V2ray | 3月25日19.6M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-7-free-subscribe-node.htm" title="Free Clash V2ray | 3月7日18.1M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点">Free Clash V2ray | 3月7日18.1M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-19-free-shadowrocket-node.htm" title="Free Clash V2ray | 4月19日20.8M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点">Free Clash V2ray | 4月19日20.8M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-16-free-shadowrocket-node.htm" title="Free Clash V2ray | 3月16日21.7M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点">Free Clash V2ray | 3月16日21.7M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-26-free-subscribe-node.htm" title="Free Clash V2ray | 3月26日20.3M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅节点">Free Clash V2ray | 3月26日20.3M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅节点</a></li>
                     </ul>
     </div>
 </div>
@@ -368,10 +368,10 @@ Windows 用户可尝试关闭系统代理再开启；Mac 用户可重启 network
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
