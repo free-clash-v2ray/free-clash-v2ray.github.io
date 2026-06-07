@@ -134,12 +134,13 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-6-4-free-v2ray.htm">Free Clash V2ray | 6月4日19.3M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点订阅节点</a></p>
+        <p>下一个：<a href="/free-nodes/2026-6-6-free-subscribe-node.htm">Free Clash V2ray | 6月6日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅节点</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 是否支持多出口自动选择？</h5></div>
     <div class="panel-body">
-        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
+        支持。通过配置路由规则和策略组，Sing-box 可以自动判断流量类型并选择最佳出口，实现智能分流和多节点负载均衡，提高访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
@@ -147,14 +148,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议参数如何提高抗封锁能力？</h5></div>
     <div class="panel-body">
-        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的 UDP 转发功能需要注意什么？</h5></div>
-    <div class="panel-body">
-        SSR 的 UDP 转发需要服务端和客户端同时开启，同时确保服务器防火墙允许 UDP 通信。UDP 流量不可靠，可能在高丢包网络中导致连接中断，需要测试稳定性。<hr />    </div>
+        SSR 的协议参数可以模拟不同流量特征，使加密流量更像普通 HTTP 或 HTTPS。合理选择协议类型和混淆参数，可以有效降低被封锁的风险，提高节点长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 支持按端口和协议分流吗？</h5></div>
@@ -162,9 +158,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         支持。QuantumultX 可以按 TCP、UDP、端口和应用协议分流流量，结合策略组使用，确保游戏、视频和广告屏蔽走最优节点，提高访问速度和网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆和协议设置如何选择才能绕过封锁？</h5></div>
+    <div class="panel-heading"><h5>QuantumultX 支持按端口进行流量分流吗？</h5></div>
     <div class="panel-body">
-        选择模拟 HTTPS 的混淆方式如 tls1.2_ticket_auth，并搭配 AEAD 或协议插件，可以有效隐藏流量特征，降低被封锁风险。不同网络环境需测试选择最优组合。<hr />    </div>
+        支持。用户可以根据端口号将不同应用流量分流到指定节点。例如游戏走低延迟节点，浏览网页走普通节点，实现精准流量管理和优化网络访问速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议相比 TCP 有什么优势？</h5></div>
@@ -172,19 +168,24 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         QUIC 协议基于 UDP，减少了握手延迟，支持多路复用和拥塞控制优化。Hysteria2 利用 QUIC 提供更低延迟、更高稳定性的网络连接，尤其适合高延迟或丢包环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议参数如何提高抗封锁能力？</h5></div>
+    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
     <div class="panel-body">
-        SSR 的协议参数可以模拟不同流量特征，使加密流量更像普通 HTTP 或 HTTPS。合理选择协议类型和混淆参数，可以有效降低被封锁的风险，提高节点长期可用性。<hr />    </div>
+        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否支持多出口自动选择？</h5></div>
+    <div class="panel-heading"><h5>SSR 的 UDP 转发功能需要注意什么？</h5></div>
     <div class="panel-body">
-        支持。通过配置路由规则和策略组，Sing-box 可以自动判断流量类型并选择最佳出口，实现智能分流和多节点负载均衡，提高访问效率。<hr />    </div>
+        SSR 的 UDP 转发需要服务端和客户端同时开启，同时确保服务器防火墙允许 UDP 通信。UDP 流量不可靠，可能在高丢包网络中导致连接中断，需要测试稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 支持按端口进行流量分流吗？</h5></div>
+    <div class="panel-heading"><h5>SSR 的混淆和协议设置如何选择才能绕过封锁？</h5></div>
     <div class="panel-body">
-        支持。用户可以根据端口号将不同应用流量分流到指定节点。例如游戏走低延迟节点，浏览网页走普通节点，实现精准流量管理和优化网络访问速度。    </div>
+        选择模拟 HTTPS 的混淆方式如 tls1.2_ticket_auth，并搭配 AEAD 或协议插件，可以有效隐藏流量特征，降低被封锁风险。不同网络环境需测试选择最优组合。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
+    <div class="panel-body">
+        目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -234,16 +235,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-5-28-free-clash-subscribe.htm" title="Free Clash V2ray | 5月28日18.5M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点">Free Clash V2ray | 5月28日18.5M/S|免费Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-15-clash-windows.htm" title="Free Clash V2ray | 5月15日18.3M/S|免费Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点订阅节点">Free Clash V2ray | 5月15日18.3M/S|免费Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-14-shadowrocket-node.htm" title="Free Clash V2ray | 5月14日20.7M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点">Free Clash V2ray | 5月14日20.7M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-4-free-node-subscribe.htm" title="Free Clash V2ray | 5月4日22M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点订阅节点">Free Clash V2ray | 5月4日22M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-5-clash-windows.htm" title="Free Clash V2ray | 5月5日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点">Free Clash V2ray | 5月5日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-13-free-ssr-node.htm" title="Free Clash V2ray | 5月13日20.4M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点">Free Clash V2ray | 5月13日20.4M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-27-free-clash-subscribe.htm" title="Free Clash V2ray | 5月27日22.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点">Free Clash V2ray | 5月27日22.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-21-clash-node.htm" title="Free Clash V2ray | 5月21日18.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点订阅节点">Free Clash V2ray | 5月21日18.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-3-free-node-subscribe.htm" title="Free Clash V2ray | 6月3日20.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点订阅节点">Free Clash V2ray | 6月3日20.4M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-7-node-share-links.htm" title="Free Clash V2ray | 6月7日22.3M/S|免费Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点订阅节点">Free Clash V2ray | 6月7日22.3M/S|免费Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-18-free-node-subscribe.htm" title="Free Clash V2ray | 5月18日19.8M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点订阅节点">Free Clash V2ray | 5月18日19.8M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-6-free-subscribe-node.htm" title="Free Clash V2ray | 6月6日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅节点">Free Clash V2ray | 6月6日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-19-free-clash-subscribe.htm" title="Free Clash V2ray | 5月19日22.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点订阅节点">Free Clash V2ray | 5月19日22.5M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-31-node-share.htm" title="Free Clash V2ray | 5月31日21.1M/S|免费Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 5月31日21.1M/S|免费Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-30-node-share-links.htm" title="Free Clash V2ray | 5月30日21.4M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点">Free Clash V2ray | 5月30日21.4M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-5-11-free-v2ray.htm" title="Free Clash V2ray | 5月11日23M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点订阅节点">Free Clash V2ray | 5月11日23M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点订阅节点</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-4-free-v2ray.htm" title="Free Clash V2ray | 6月4日19.3M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点订阅节点">Free Clash V2ray | 6月4日19.3M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-25-free-node-subscribe-links.htm" title="Free Clash V2ray | 5月25日18.9M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点">Free Clash V2ray | 5月25日18.9M/S|免费Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点订阅节点</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-1-free-node-subscribe-links.htm" title="Free Clash V2ray | 6月1日20.5M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点订阅节点">Free Clash V2ray | 6月1日20.5M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点订阅节点</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -255,7 +256,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
